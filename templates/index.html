@@ -1,27 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	<main>
-		<h1></h1>
-		<p></p>
-		<div id="login">
-			<label for="userid"><b>username</b></label>
-			<input type="text" placeholder="enter username" name="userid" required>
+{% extends "base.html" %}
 
-			<label for="password"><b>password</b></label>
-			<input type="password" placeholder="enter password" name=password required>
-
-			<button type="submit">Login</button>
-			<label>
-				<input type="checkbox" checked="checked" name="remember"> remember me
-			</label>
-		</div>
-
-	</main>
-</body>
-</html>
+{% block content %}
+<h1 class="title">
+  Flask Login Example
+</h1>
+<h2 class="subtitle">
+  Easy authentication and authorization in Flask.
+</h2>
+{% endblock %}
