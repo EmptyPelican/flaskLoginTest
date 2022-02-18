@@ -1,10 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  Flask Login Example
-</h1>
-<h2 class="subtitle">
-  Easy authentication and authorization in Flask.
-</h2>
+
+<section class="section">
+  <div class="container" style="height: 250px;">
+    <h1 class="title is-1">
+      User Login Example
+    </h1>
+    <h2 class="subtitle has-text-black is-3">
+      use the menu or link below to create a new account!
+    </h2>
+
+    <button class="button"><a href="{{ url_for('auth.signup') }}" class="is-black is-6">create an account!</a></button>
+<!--     <p class="has-text-right is-alert box">
+      
+    </p> -->
+  </div>
+</section>
+
 {% endblock %}

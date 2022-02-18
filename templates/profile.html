@@ -1,7 +1,59 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  Welcome, {{ name }}!
-</h1>
+
+
+  <div class="container mb-6 mt-0 has-background-success-dark">
+    <h1 class="title">
+      Welcome, {{ name }}!
+    </h1>
+    <h2 class="subtitle">select a ticker and click "add to my watch list"</h2>
+  </div>
+
+  <div class="columns">
+
+    <div class="column is-half is-flex">
+          <form action="POST" action=/addTicker>
+            <div class="field">
+              <label class="label">Ticker</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="ME">
+              </div>
+            </div>
+            <input class="button" type="" value="Submit input">
+          </form>
+
+    </div>
+    <div class="column"></div>
+    <div class="column"></div>
+    <div class="column">
+
+      <h1 class="title is-size-4">Active Watch List</h1>
+      <div class="table-container">
+        <div class="box">
+          <table class="table is-bordered">
+            <thead>
+              <tr>
+                <th><abbr title="Ticker">Ticker</abbr></th>
+                <th><abbr title="CValue">Current Value</abbr></th>
+                <th><abbr title="Wvalue">Watch Value</abbr></th>
+              </tr>
+            <tbody>
+              <tr>
+                <th>ME</th>
+                <td>4.59</td>
+                <td>50%</td>
+              </tr>
+              <tr>
+                <th>ME</th>
+                <td>4.59</td>
+                <td>50%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
 {% endblock %}
